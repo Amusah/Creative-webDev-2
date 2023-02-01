@@ -162,6 +162,68 @@
     }
 }
 
+//CONTACT
+.contact{
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    .form-wrapper{
+        flex: 3 1 40rem;
+
+        h2{
+            margin: 5rem 0;
+        }
+        span{
+            font-size: $big;
+            color: $special-color;
+        }
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+            margin: 3rem 0;
+            background: $background-color;
+            color: white;
+            border: none;
+            padding: 1rem;
+        }
+        button{
+            padding: 1rem 8rem;
+            background: $special-color;
+            color: white;
+            border: none;
+            width: 100% ;
+        }
+    }
+
+    img{
+        flex: 1 1 40rem;
+    }
+}
+
+//FOOTER
+footer{
+    background: $background-color;
+    color: white;
+    display: flex;
+    padding: 3rem 5%;
+    align-items: center;
+    flex-wrap: wrap;
+
+    h4{
+        flex: 3 1 40rem;
+        font-size: calc(1.6rem + 1vw);
+    }
+    ul{
+        display: flex;
+        flex: 1 1 40rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width:842px){
     .hero{
         width: 100%;
@@ -239,7 +301,6 @@
     .about-text div{
         padding: 3rem;
     }
-
     //Gallery
     .gallery{
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -252,5 +313,30 @@
             grid-row: auto;
             grid-column: auto;
         }
+    }
+    .contact img{
+        display: none;
+    }
+
+    footer{
+        ul{
+            order: 1;
+        }
+        h4{
+            order: 2;
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1700px){
+    html{
+        $header1: 3rem;
+        $header2: 5rem;
+        $header3: 4rem;
+        $header4: 3rem;
+        $text:3rem;
+        $big: 8rem;
     }
 }
