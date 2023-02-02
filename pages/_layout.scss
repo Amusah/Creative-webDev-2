@@ -194,7 +194,8 @@
             background: $special-color;
             color: white;
             border: none;
-            width: 100% ;
+            width: 100%;
+            cursor: pointer;
         }
     }
 
@@ -235,6 +236,7 @@ footer{
     .burger{
         position: relative;
         display: block;
+        cursor: pointer;
         //transition: all 1s;
 
         & span{
@@ -266,38 +268,73 @@ footer{
         }
     }
 
-    .menu-check{
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: -1%;
-        // right: 5%;
-        transform: translate(5%, -50%);
-        width: 5rem;
-        height: 5rem;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 4;
 
-        &:checked + .nav-links{  // THe + sign targets elements right after selected element
+        .nav-open{ 
             transform: translateX(-100%);
         }
-        &:checked ~ .burger span{
-            background-color: white;
+
+        .toggle{
+            .line1{
+                transform: rotateZ(45deg) translateY(300%);
+                background: white;
+            }
+            .line2{
+                opacity: 0;
+            }
+            .line3{
+                transform: rotateZ(-45deg) translateY(-300%);
+                background: white;
+            }
         }
-        &:checked ~ .burger span:nth-child(1){
-            transform: rotateZ(45deg) translateY(300%);
-            //transition: all 1s;
-        }
-        &:checked ~ .burger span:nth-child(2){
-            opacity: 0;
-        }
-        &:checked ~ .burger span:nth-child(3){
-            transform: rotateZ(-45deg) translateY(-300%);
-            //transition: all 1s;
-        }
-    }
- //About section
+
+        // .toggle .line1{
+        //     transform: rotateZ(45deg) translateY(300%);
+        //     background: white;
+        // }
+
+        // .toggle .line2{
+        //     opacity: 0;
+        // }
+
+        // .toggle .line3{
+        //     transform: rotateZ(-45deg) translateY(-300%);
+        //     background: white;
+        // }
+   
+ 
+
+//     .menu-check{
+//         display: block;
+//         position: absolute;
+//         top: 50%;
+//         right: -1%;
+//         // right: 5%;
+//         transform: translate(5%, -50%);
+//         width: 5rem;
+//         height: 5rem;
+//         cursor: pointer;
+//         opacity: 0;
+//         z-index: 4;
+
+//         &:checked + .nav-links{  // THe + sign targets elements right after selected element
+//             transform: translateX(-100%);
+//         }
+//         &:checked ~ .burger span{
+//             background-color: white;
+//         }
+//         &:checked ~ .burger span:nth-child(1){
+//             transform: rotateZ(45deg) translateY(300%);
+//             //transition: all 1s;
+//         }
+//         &:checked ~ .burger span:nth-child(2){
+//             opacity: 0;
+//         }
+//         &:checked ~ .burger span:nth-child(3){
+//             transform: rotateZ(-45deg) translateY(-300%);
+//             //transition: all 1s;
+//         }
+//     }
+//  //About section
     .about-text div{
         padding: 3rem;
     }
