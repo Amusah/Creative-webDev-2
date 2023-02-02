@@ -18,6 +18,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -271,6 +272,7 @@ nav {
   color: white;
   border: none;
   width: 100%;
+  cursor: pointer;
 }
 .contact img {
   flex: 1 1 40rem;
@@ -305,6 +307,7 @@ footer ul {
   .burger {
     position: relative;
     display: block;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
@@ -329,32 +332,19 @@ footer ul {
     font-size: calc(2.4rem + 1vw);
     text-decoration: underline;
   }
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -1%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 4;
-  }
-  .menu-check:checked + .nav-links {
+  .nav-open {
     transform: translateX(-100%);
   }
-  .menu-check:checked ~ .burger span {
-    background-color: white;
-  }
-  .menu-check:checked ~ .burger span:nth-child(1) {
+  .toggle .line1 {
     transform: rotateZ(45deg) translateY(300%);
+    background: white;
   }
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  .toggle .line2 {
     opacity: 0;
   }
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
   .about-text div {
     padding: 3rem;
